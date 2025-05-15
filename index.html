@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAF COFFEE | AKTAU</title>
+    <meta name="description" content="Кофейня RAF COFFEE в Актау - сладкие вкусы старого города">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="coffee-cup">
+            <div class="cup">
+                <div class="handle"></div>
+            </div>
+            <div class="plate"></div>
+            <div class="steam">
+                <div class="steam-line"></div>
+                <div class="steam-line"></div>
+                <div class="steam-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <span class="logo-text">RAF COFFEE</span>
+                    <span class="logo-subtext">AKTAU</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Главная</a>
+                    <a href="menu.html" class="nav-link">Меню</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu-link active">Главная</a>
+        <a href="menu.html" class="mobile-menu-link">Меню</a>
+        <a href="#contacts" class="mobile-menu-link">Контакты</a>
+    </div>
+
+    <section class="hero">
+		<video class="hero-video" autoplay muted loop playsinline>
+        <source src="images/hero-bg.mp4" type="video/mp4">
+        <!-- Добавьте fallback для браузеров, которые не поддерживают видео -->
+        Ваш браузер не поддерживает видео.
+		</video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">RAF COFFEE</h1>
+                <p class="hero-subtitle">Сладкие вкусы старого города</p>
+                <a href="menu.html" class="btn btn-primary">Посмотреть меню</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Листайте вниз</span>
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наша кофейня</h2>
+                <p class="section-subtitle">Место, где рождаются вкусы</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>RAF COFFEE - это уютное место в сердце Актау, где каждый найдет что-то по вкусу. Мы тщательно отбираем зерна для нашего кофе и ингредиенты для наших блюд, чтобы предложить вам только лучшее.</p>
+                    <p>Наша атмосфера создана для того, чтобы вы могли насладиться вкусным кофе, десертами и закусками в приятной обстановке.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="images/coffee-interior.jpg" alt="Интерьер кофейни" class="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hours">
+        <div class="container">
+            <div class="hours-content">
+                <div class="hours-card">
+                    <h3>Часы работы</h3>
+                    <ul class="hours-list">
+                        <li><span>Пн-Чт:</span> 08:00 - 02:00</li>
+                        <li><span>Пт-Сб:</span> 24 часа</li>
+                        <li><span>Вс:</span> 09:00 - 02:00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="branches" id="contacts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши филиалы</h2>
+                <p class="section-subtitle">Приходите в гости</p>
+            </div>
+            <div class="branches-content">
+                <div class="branch-card">
+                    <h3>19 мкр. 34 дом, ЖК "ТУРАН"</h3>
+                    <div class="branch-map" id="map1"></div>
+                    <a href="https://wa.me/7765212120" class="btn btn-outline">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                </div>
+                <div class="branch-card">
+                    <h3>28 мкр. 59/3</h3>
+                    <div class="branch-map" id="map2"></div>
+                    <a href="https://wa.me/7765212120" class="btn btn-outline">
+                        <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">RAF COFFEE</span>
+                    <span class="logo-subtext">AKTAU</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Главная</a>
+                    <a href="menu.html" class="footer-link">Меню</a>
+                    <a href="#contacts" class="footer-link">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/rafcoffee.aktau" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/7765212120" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 RAF COFFEE. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+	<script>
+	DG.then(function () {
+		const map1 = DG.map('map1', {
+        center: [43.6797275, 51.1506292],
+        zoom: 16
+		});
+		DG.marker([43.6797275, 51.1506292]).addTo(map1).bindPopup('RAF Coffee | 19 мкр');
+	
+		const map2 = DG.map('map2', {
+			center: [43.672995, 51.164816],
+			zoom: 16
+		});
+		DG.marker([43.672995, 51.164816]).addTo(map2).bindPopup('RAF Coffee | 28 мкр');
+	});
+	</script>
+
+</body>
+</html>

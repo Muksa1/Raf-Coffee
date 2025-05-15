@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | RAF COFFEE | AKTAU</title>
+    <meta name="description" content="Меню кофейни RAF COFFEE в Актау">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="coffee-cup">
+            <div class="cup">
+                <div class="handle"></div>
+            </div>
+            <div class="plate"></div>
+            <div class="steam">
+                <div class="steam-line"></div>
+                <div class="steam-line"></div>
+                <div class="steam-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <span class="logo-text">RAF COFFEE</span>
+                    <span class="logo-subtext">AKTAU</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="menu.html" class="nav-link active">Меню</a>
+                    <a href="index.html#contacts" class="nav-link">Контакты</a>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu-link">Главная</a>
+        <a href="menu.html" class="mobile-menu-link active">Меню</a>
+        <a href="index.html#contacts" class="mobile-menu-link">Контакты</a>
+    </div>
+
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1 class="menu-hero-title">Наше меню</h1>
+                <p class="menu-hero-subtitle">Откройте для себя наши вкусы</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Ваш заказ</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Тут будут товары -->
+        </div>
+        <div class="cart-summary">
+            <div class="cart-subtotal">
+                <span>Сумма:</span>
+                <span id="subtotal">0 ₸</span>
+            </div>
+            <div class="cart-service">
+                <span>Обслуживание (10%):</span>
+                <span id="serviceFee">0 ₸</span>
+            </div>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="total">0 ₸</span>
+            </div>
+            <button class="btn btn-primary btn-checkout" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <button class="close-checkout" id="closeCheckout">&times;</button>
+            <h3>Оформление заказа</h3>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="tableNumber">Номер столика</label>
+                    <input type="text" id="tableNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerName">Ваше имя</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Номер телефона</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Примечания к заказу</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="menu-categories">
+        <div class="container">
+            <div class="categories-tabs">
+                <button class="category-tab active" data-category="coffee">Кофе</button>
+                <button class="category-tab" data-category="tea">Чай</button>
+                <button class="category-tab" data-category="desserts">Десерты</button>
+                <button class="category-tab" data-category="breakfast">Завтраки</button>
+                <button class="category-tab" data-category="lunch">Обеды</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-items">
+        <div class="container">
+            <!-- Кофе -->
+            <div class="menu-category active" id="coffee">
+                <h2 class="category-title">Кофе</h2>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Классический кофе</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Эспрессо</h4>
+                                <p class="item-desc">Крепкий черный кофе, приготовленный под давлением</p>
+                                <span class="item-price">800 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Американо</h4>
+                                <p class="item-desc">Эспрессо с добавлением горячей воды</p>
+                                <span class="item-price">900 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Капучино</h4>
+                                <p class="item-desc">Эспрессо с молоком и молочной пеной</p>
+                                <span class="item-price">1200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Латте</h4>
+                                <p class="item-desc">Эспрессо с большим количеством молока и молочной пеной</p>
+                                <span class="item-price">1300 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Авторские напитки</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Раф кофе</h4>
+                                <p class="item-desc">Авторский напиток на основе эспрессо, сливок и ванильного сиропа</p>
+                                <span class="item-price">1500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Карамельный макиато</h4>
+                                <p class="item-desc">Эспрессо с молоком, карамельным сиропом и пеной</p>
+                                <span class="item-price">1600 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Моккачино</h4>
+                                <p class="item-desc">Шоколадный латте с взбитыми сливками</p>
+                                <span class="item-price">1700 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Чай -->
+            <div class="menu-category" id="tea">
+                <h2 class="category-title">Чай</h2>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Черный чай</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Английский завтрак</h4>
+                                <p class="item-desc">Крепкий черный чай с насыщенным вкусом</p>
+                                <span class="item-price">900 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Эрл Грей</h4>
+                                <p class="item-desc">Черный чай с бергамотом</p>
+                                <span class="item-price">1000 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Зеленый чай</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Жасминовый</h4>
+                                <p class="item-desc">Зеленый чай с цветами жасмина</p>
+                                <span class="item-price">1000 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Мятный</h4>
+                                <p class="item-desc">Зеленый чай с мятой</p>
+                                <span class="item-price">1100 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Фруктовые чаи</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Ягодный микс</h4>
+                                <p class="item-desc">Фруктовый чай с ягодами</p>
+                                <span class="item-price">1200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Тропический</h4>
+                                <p class="item-desc">Фруктовый чай с ананасом и манго</p>
+                                <span class="item-price">1200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Десерты -->
+            <div class="menu-category" id="desserts">
+                <h2 class="category-title">Десерты</h2>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Торты</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Чизкейк Нью-Йорк</h4>
+                                <p class="item-desc">Классический чизкейк с нежной текстурой</p>
+                                <span class="item-price">2500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Красный бархат</h4>
+                                <p class="item-desc">Нежный бисквит с крем-чизом</p>
+                                <span class="item-price">2700 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Пирожные</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Эклер</h4>
+                                <p class="item-desc">Заварное пирожное с заварным кремом</p>
+                                <span class="item-price">1500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Медовик</h4>
+                                <p class="item-desc">Медовые коржи со сметанным кремом</p>
+                                <span class="item-price">1800 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Мороженое</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Пломбир</h4>
+                                <p class="item-desc">Классическое ванильное мороженое</p>
+                                <span class="item-price">1200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Шоколадное</h4>
+                                <p class="item-desc">Мороженое с насыщенным шоколадным вкусом</p>
+                                <span class="item-price">1300 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Завтраки -->
+            <div class="menu-category" id="breakfast">
+                <h2 class="category-title">Завтраки</h2>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Классические</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Английский завтрак</h4>
+                                <p class="item-desc">Яичница, бекон, сосиски, фасоль, грибы, помидоры, тосты</p>
+                                <span class="item-price">3500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Омлет с овощами</h4>
+                                <p class="item-desc">Омлет с болгарским перцем, помидорами и зеленью</p>
+                                <span class="item-price">2800 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Блины и оладьи</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Блины с вареньем</h4>
+                                <p class="item-desc">Тонкие блины с домашним вареньем</p>
+                                <span class="item-price">2200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Американские панкейки</h4>
+                                <p class="item-desc">Пышные оладьи с кленовым сиропом</p>
+                                <span class="item-price">2500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Обеды -->
+            <div class="menu-category" id="lunch">
+                <h2 class="category-title">Обеды</h2>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Салаты</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Цезарь</h4>
+                                <p class="item-desc">Салат с курицей, листьями салата, сухариками и соусом цезарь</p>
+                                <span class="item-price">3200 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Греческий</h4>
+                                <p class="item-desc">Салат с помидорами, огурцами, перцем, луком, оливками и сыром фета</p>
+                                <span class="item-price">3000 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Основные блюда</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Паста Карбонара</h4>
+                                <p class="item-desc">Спагетти с беконом, сливочным соусом и пармезаном</p>
+                                <span class="item-price">3800 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Куриный стейк</h4>
+                                <p class="item-desc">Куриная грудка с овощами и картофельным пюре</p>
+                                <span class="item-price">4000 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subcategory">
+                    <h3 class="subcategory-title">Супы</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Том Ям</h4>
+                                <p class="item-desc">Острый тайский суп с креветками и кокосовым молоком</p>
+                                <span class="item-price">3500 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item">
+                            <div class="item-info">
+                                <h4 class="item-name">Грибной крем-суп</h4>
+                                <p class="item-desc">Нежный крем-суп из шампиньонов</p>
+                                <span class="item-price">2800 ₸</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">RAF COFFEE</span>
+                    <span class="logo-subtext">AKTAU</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Главная</a>
+                    <a href="menu.html" class="footer-link">Меню</a>
+                    <a href="index.html#contacts" class="footer-link">Контакты</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/rafcoffee.aktau" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/7765212120" class="social-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2023 RAF COFFEE. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
